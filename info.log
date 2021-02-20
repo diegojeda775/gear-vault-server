@@ -76,3 +76,7 @@
 {"message":"Item with id 20 created","level":"info"}
 {"message":"Invalid price $'invalid' supplied","level":"error"}
 {"message":"Item with id 1 created","level":"info"}
+{"message":"Item with id 21 created","level":"info"}
+{"message":"Item with id 22 created","level":"info"}
+{"message":"Item with id 23 created","level":"info"}
+{"message":"Item with id 24 created","level":"info"}
