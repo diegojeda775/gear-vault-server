@@ -3,6 +3,7 @@ const fixtures = require('./items.fixtures')
 const app = require('../src/app')
 const xss = require('xss')
 const supertest = require('supertest')
+const { expect } = require('chai')
 
 
 
@@ -79,6 +80,60 @@ describe('Items Endpoints', () => {
                         expect(res.body[0].serial_number).to.eql(expectedItem.serial_number)
                         expect(res.body[0].purchase_place).to.eql(expectedItem.purchase_place)
                     })
+            })
+
+        })
+
+    })
+
+    describe('Post /api/items', () => {
+
+        context('Responds with 400 invalid Price if not a number', () => {
+            const newInvalidItem = {
+                name: 'test-name',
+                brand: 'test-brand',
+                serial_number: 'ibgisuabr9359',
+                price: 'invalid',
+                purchase_date: '2020-02-19',
+                purchase_place: 'test-place'
+            }
+
+            it('Given an invalid Price', () => {
+                return supertest(app)
+                    .post('/api/items')
+                    .send(newInvalidItem)
+                    .expect(400, {
+                        error: { message: `'Price' must be a number`}
+                    })
+            })
+        })
+
+        context('Given there are no items in the database', () => {
+            
+
+            it('Adds item to database', () => {
+                const newItem = {
+                    name: 'test-name',
+                    brand: 'test-brand',
+                    serial_number: 'ibgisuabr9359',
+                    price: 399.99,
+                    purchase_date: '2020-02-19',
+                    purchase_place: 'test-place'
+                }
+
+                return supertest(app)
+                    .post('/api/items')
+                    .send(newItem)
+                    .expect(res => {
+                        expect(res.body.name).to.eql(newItem.name)
+                        expect(res.body.brand).to.eql(newItem.brand)
+                        expect(res.body.serial_number).to.eql(newItem.serial_number)
+                        expect(res.body.price).to.eql(newItem.price.toString())
+                        expect(res.body.purchase_date).to.eql(new Date(newItem.purchase_date).toJSON())
+                        expect(res.body.purchase_place).to.eql(newItem.purchase_place)
+                        expect(res.body).to.have.property('id')
+                    })
+                    
             })
 
         })

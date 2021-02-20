@@ -27,5 +27,41 @@ itemsRouter
         .catch(next)
     })
 
+    .post(bodyParser, (req, res, next) => {
+
+        const { name, brand, serial_number, price, purchase_date, purchase_place } = req.body
+        const newItem = { name, brand, serial_number, price, purchase_date, purchase_place }
+
+        for (const field of ['name', 'serial_number', 'price', 'purchase_date']) {
+            if (!newItem[field]) {
+                logger.error(`${field} is required`)
+                return res.status(400).send({
+                    error: { message: `'${field}' is required` }
+                })
+            }
+        }
+
+        const numPrice = +price
+        
+        if(isNaN(numPrice)) {
+            logger.error(`Invalid price $'${price}' supplied`);
+            return res.status(400).send({
+                error: { message: `'Price' must be a number`}
+            })
+        }
+
+        ItemsService.insertItem(
+            req.app.get('db'),
+            newItem
+            )
+            .then(item => {
+                logger.info(`Item with id ${item.id} created`)
+                res
+                    .status(201)
+                    .json(sanitizedItem(item))
+            })
+            .catch(next)
+    })
+
 
 module.exports = itemsRouter

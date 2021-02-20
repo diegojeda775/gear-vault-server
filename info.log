@@ -1,2 +1,78 @@
 {"message":"item.purchase_date.toJson is not a function","level":"error"}
 {"message":"Date(...).toJson is not a function","level":"error"}
+{"message":"Invalid price $'invalid' supplied","level":"error"}
+{"message":"Invalid price $'invalid' supplied","level":"error"}
+{"message":"Invalid price $'399.99' supplied","level":"error"}
+{"message":"Invalid price $'invalid' supplied","level":"error"}
+{"message":"Item with id 1 created","level":"info"}
+{"message":"Invalid price $'invalid' supplied","level":"error"}
+{"message":"Item with id 1 created","level":"info"}
+{"message":"Invalid price $'invalid' supplied","level":"error"}
+{"message":"Invalid price $'399.11' supplied","level":"error"}
+{"message":"Invalid price $'invalid' supplied","level":"error"}
+{"message":"Item with id 1 created","level":"info"}
+{"message":"Invalid price $'invalid' supplied","level":"error"}
+{"message":"Invalid price $'399.99' supplied","level":"error"}
+{"message":"Invalid price $'invalid' supplied","level":"error"}
+{"message":"Invalid price $'399.99' supplied","level":"error"}
+{"message":"Invalid price $'invalid' supplied","level":"error"}
+{"message":"Invalid price $'399.99' supplied","level":"error"}
+{"message":"Invalid price $'399.99' supplied","level":"error"}
+{"message":"Invalid price $'399.99' supplied","level":"error"}
+{"message":"Item with id 5 created","level":"info"}
+{"message":"Invalid price $'399.43' supplied","level":"error"}
+{"message":"numPrice.match is not a function","level":"error"}
+{"message":"Invalid price $'399.43' supplied","level":"error"}
+{"message":"Invalid price $'399.43' supplied","level":"error"}
+{"message":"Invalid price $'399.43' supplied","level":"error"}
+{"message":"Item with id 6 created","level":"info"}
+{"message":"numFolderID is not defined","level":"error"}
+{"message":"Invalid price $'399.57' supplied","level":"error"}
+{"message":"Invalid price $'399.57' supplied","level":"error"}
+{"message":"Item with id 7 created","level":"info"}
+{"message":"insert into \"items\" (\"brand\", \"name\", \"price\", \"purchase_date\", \"purchase_place\", \"serial_number\") values ($1, $2, $3, $4, $5, $6) returning * - invalid input syntax for type numeric: \"invalid\"","level":"error"}
+{"message":"Item with id 1 created","level":"info"}
+{"message":"insert into \"items\" (\"brand\", \"name\", \"price\", \"purchase_date\", \"purchase_place\", \"serial_number\") values ($1, $2, $3, $4, $5, $6) returning * - invalid input syntax for type numeric: \"invalid\"","level":"error"}
+{"message":"Item with id 8 created","level":"info"}
+{"message":"Item with id 9 created","level":"info"}
+{"message":"Item with id 10 created","level":"info"}
+{"message":"insert into \"items\" (\"brand\", \"name\", \"price\", \"purchase_date\", \"purchase_place\", \"serial_number\") values ($1, $2, $3, $4, $5, $6) returning * - invalid input syntax for type numeric: \"invalid\"","level":"error"}
+{"message":"Item with id 1 created","level":"info"}
+{"message":"Invalid price $'invalid' supplied","level":"error"}
+{"message":"Invalid price $'399.99' supplied","level":"error"}
+{"message":"Invalid price $'300.87' supplied","level":"error"}
+{"message":"Item with id 11 created","level":"info"}
+{"message":"insert into \"items\" (\"brand\", \"name\", \"price\", \"purchase_date\", \"purchase_place\", \"serial_number\") values ($1, $2, $3, $4, $5, $6) returning * - invalid input syntax for type numeric: \"invalid\"","level":"error"}
+{"message":"Item with id 1 created","level":"info"}
+{"message":"Invalid price $'300' supplied","level":"error"}
+{"message":"Invalid price $'300' supplied","level":"error"}
+{"message":"Item with id 12 created","level":"info"}
+{"message":"Item with id 13 created","level":"info"}
+{"message":"Invalid price $'300.00' supplied","level":"error"}
+{"message":"Item with id 14 created","level":"info"}
+{"message":"insert into \"items\" (\"brand\", \"name\", \"price\", \"purchase_date\", \"purchase_place\", \"serial_number\") values ($1, $2, $3, $4, $5, $6) returning * - invalid input syntax for type numeric: \"invalid\"","level":"error"}
+{"message":"Invalid price $'invalid' supplied","level":"error"}
+{"message":"Invalid price $'invalid' supplied","level":"error"}
+{"message":"Invalid price $'300' supplied","level":"error"}
+{"message":"Invalid price $'300' supplied","level":"error"}
+{"message":"Item with id 15 created","level":"info"}
+{"message":"Invalid price $'300.5' supplied","level":"error"}
+{"message":"Item with id 16 created","level":"info"}
+{"message":"Item with id 17 created","level":"info"}
+{"message":"insert into \"items\" (\"brand\", \"name\", \"price\", \"purchase_date\", \"purchase_place\", \"serial_number\") values ($1, $2, $3, $4, $5, $6) returning * - invalid input syntax for type numeric: \"invalid\"","level":"error"}
+{"message":"Invalid price $'invalid' supplied","level":"error"}
+{"message":"Invalid price $'2.4' supplied","level":"error"}
+{"message":"Invalid price $'2.4' supplied","level":"error"}
+{"message":"Invalid price $'invalid' supplied","level":"error"}
+{"message":"Assignment to constant variable.","level":"error"}
+{"message":"insert into \"items\" (\"brand\", \"name\", \"price\", \"purchase_date\", \"purchase_place\", \"serial_number\") values ($1, $2, $3, $4, $5, $6) returning * - invalid input syntax for type numeric: \"invalid\"","level":"error"}
+{"message":"insert into \"items\" (\"brand\", \"name\", \"price\", \"purchase_date\", \"purchase_place\", \"serial_number\") values ($1, $2, $3, $4, $5, $6) returning * - invalid input syntax for type numeric: \"invalid\"","level":"error"}
+{"message":"insert into \"items\" (\"brand\", \"name\", \"price\", \"purchase_date\", \"purchase_place\", \"serial_number\") values ($1, $2, $3, $4, $5, $6) returning * - invalid input syntax for type numeric: \"invalid\"","level":"error"}
+{"message":"insert into \"items\" (\"brand\", \"name\", \"price\", \"purchase_date\", \"purchase_place\", \"serial_number\") values ($1, $2, $3, $4, $5, $6) returning * - invalid input syntax for type numeric: \"invalid\"","level":"error"}
+{"message":"insert into \"items\" (\"brand\", \"name\", \"price\", \"purchase_date\", \"purchase_place\", \"serial_number\") values ($1, $2, $3, $4, $5, $6) returning * - invalid input syntax for type numeric: \"invalid\"","level":"error"}
+{"message":"Invalid price $'invalid' supplied","level":"error"}
+{"message":"Item with id 18 created","level":"info"}
+{"message":"Item with id 19 created","level":"info"}
+{"message":"Item with id 20 created","level":"info"}
+{"message":"Invalid price $'invalid' supplied","level":"error"}
+{"message":"Item with id 1 created","level":"info"}
