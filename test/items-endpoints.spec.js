@@ -140,4 +140,54 @@ describe('Items Endpoints', () => {
 
     })
 
+    describe('DELETE /api/items/:item_id', () => {
+
+        context('Given there are no items in database', () => {
+            it('Responds with 404 when item does not exist', () => {
+                return supertest(app)
+                    .delete('/api/items/123')
+                    .expect(404, {
+                        error: { message: 'Item Not Found'}
+                    })
+            })
+        })
+
+        context('Given there are items in database', () => {
+            const testItems = fixtures.makeItemsArray()
+
+            const sanitizedItem = item => ({
+                id: item.id,
+                name: xss(item.name),
+                brand: xss(item.brand),
+                serial_number: xss(item.serial_number),
+                price: item.price.toString(),
+                purchase_date: new Date(item.purchase_date).toJSON(),
+                purchase_place: xss(item.purchase_place)
+            })
+
+            beforeEach('insert items', () => {
+                return db
+                    .into('items')
+                    .insert(testItems)
+            })
+
+            it('Removes item by id from database', () => {
+                const idToRemove = 2
+                const formatedItems = testItems.map(it => sanitizedItem(it))
+                const expectedItems = formatedItems.filter(it => it.id !== idToRemove)
+
+                return supertest(app)
+                    .delete(`/api/items/${idToRemove}`)
+                    .expect(204)
+                    .then(() => {
+                        return supertest(app)
+                            .get('/api/items')
+                            .expect(expectedItems)
+                    })
+
+            })
+        })
+
+    })
+
 })

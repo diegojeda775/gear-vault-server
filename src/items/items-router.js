@@ -63,5 +63,49 @@ itemsRouter
             .catch(next)
     })
 
+itemsRouter
+    .route('/:item_id')
+
+    .all((req, res, next) => {
+        const { item_id } = req.params
+        
+        ItemsService.getItemById(
+            req.app.get('db'),
+            item_id
+        )
+        .then(item => {
+            if (!item) {
+                logger.error(`Item with id ${item_id} not found.`)
+                return res.status(404).json({
+                  error: { message: `Item Not Found` }
+                })
+            }
+
+            res.item = item
+            next()
+        })
+        .catch(next)
+
+    })
+
+    .get((req, res) => {
+        res.json(sanitizedItem(res.item))
+    })
+
+    .delete((req, res, next) => {
+        const { item_id } = req.params
+
+        ItemsService.deleteItem(
+            req.app.get('db'),
+            item_id
+        )
+        .then(dltd => {
+            logger.info(`Item with id ${item_id} deleted.`)
+            res.status(204)
+                .end()
+        })
+        .catch(next)    
+    })
+
 
 module.exports = itemsRouter
