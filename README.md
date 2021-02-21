@@ -1,26 +1,12 @@
-# Express Boilerplate!
+Gear Vault App
 
-This is a boilerplate project used for starting new projects!
+Live App: https://gear-vault-app.vercel.app/
 
-## Set up
+Api/items: With this endpont, the client is able to get a list of items from the database and add items to it as well.
 
-Complete the following steps to start a new project (NEW-PROJECT-NAME):
+Api/items/:item_id: Whit this enpoint, the client is able to delete items from the database as well as getting the information from a specific item.
 
-1. Clone this repository to your local machine `git clone BOILERPLATE-URL NEW-PROJECTS-NAME`
-2. `cd` into the cloned repository
-3. Make a fresh start of the git history for this project with `rm -rf .git && git init`
-4. Install the node dependencies `npm install`
-5. Move the example Environment file to `.env` that will be ignored by git and read by the express server `mv example.env .env`
-6. Edit the contents of the `package.json` to use NEW-PROJECT-NAME instead of `"name": "express-boilerplate",`
+This app was created for those who want a central place to store gear/equipment information for any occurance like insurance claims. In this app, the user will be able to read, create or delete items. Once the user navigates to the List tab at the top of the page, A list of items will be rendered. The user can click the add button to fill out a form and add the item to the database. Also, the user is able to click on the item itself to diplay all the information like name, date, price, serial number, place and brand. In addition, there is a delete button in the item's page to remove the current item from the database.
 
-## Scripts
+Technology used: Javascript, html, css, jquery, jsx, react, node.js, express, postgresql.
 
-Start the application `npm start`
-
-Start nodemon for the application `npm run dev`
-
-Run the tests `npm test`
-
-## Deploying
-
-When your new project is ready for deployment, add a new Heroku application with `heroku create`. This will make a new git remote called "heroku" and you can then `npm run deploy` which will push to this remote's main branch.
